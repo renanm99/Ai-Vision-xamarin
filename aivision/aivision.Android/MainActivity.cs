@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FFImageLoading.Forms.Platform;
 
 namespace aivision.Droid
 {
@@ -19,8 +20,10 @@ namespace aivision.Droid
 
             base.OnCreate(bundle);
 
+            
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+            CachedImageRenderer.Init(true);
         }
     }
 }
